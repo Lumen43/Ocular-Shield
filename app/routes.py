@@ -49,3 +49,6 @@ def verify():
             return jsonify({'message': 'Acceso denegado'}), 401
 
     return render_template('verify.html')
+
+if __name__ == '__main__':
+    main.run(debug=True, port=os.getenv("PORT", default=5000))
