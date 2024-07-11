@@ -2,6 +2,7 @@ from flask import Blueprint, request, jsonify, render_template
 import cv2
 import numpy as np
 import base64
+import os
 from app.utils import preprocess_iris, generate_embedding, handle_reflection, check_image_quality
 from iris_model import load_encoder
 from database import save_user_embeddings, find_best_match
